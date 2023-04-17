@@ -1,0 +1,60 @@
+<!-- Desenvolvido por Raphael Pina Viana -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<!-- CryptoJS -->
+<script src="src/core.js"></script>
+<script src="src/enc-utf16.js"></script>
+<script src="src/enc-base64.js"></script>
+<script src="src/cipher-core.js"></script>
+<script src="src/aes.js"></script>
+<script src="sistema.js"></script>
+<title>AES 256</title>
+</head>
+<body>
+	<div class="header">
+		AES 256
+	</div>
+	<br>
+
+	<span class="inputlabel">Chave (até 32 caracteres)</span>
+	<br>
+	<center><input type="text" ID="txtKey" maxlength="32" style="width:95%; font-size:16px" /></center>
+	<span class="inputlabel"><input type="checkbox" id="chkHideKey" onclick="hideKey()" />Esconder a chave</span>
+
+	<br><br>
+
+	<span class="inputlabel">Texto</span>
+	<br>
+	<center><textarea style="height: 120px; width: 95%; font-size: 16px" ID="txtMsg"></textarea></center>
+
+	<br><br>
+
+	<center>
+		<button name="btnCripto" OnClick="FuncCifrar()">CRIPTOGRAFAR</button> <button name="btnDecripto" OnClick="FuncDecifrar()">DECRIPTOGRAFAR</button>
+	</center>
+
+	<br><br>
+
+	<div class="aviso">
+		<span class="avisoheader">SEGURANÇA</span><br>
+		<span class="avisolabel">1. Sua chave e seu texto não são enviados na rede. Essa aplicação é executada apenas no seu navegador.<br></span>
+		<span class="avisolabel">2. Jamais envie sua chave pelo mesmo canal que enviou a mensagem.<BR></span>
+		<span class="avisolabel">3. Troque sua chave com frequência.<BR></span>
+		<span class="avisolabel">4. Não utilize chaves com menos de 10 caracteres.<BR></span>
+		<span class="avisolabel">5. Utilize caracteres especiais, números, letras maiúsculas e minúsculas para fazer a chave.<BR></span>
+		<span class="avisolabel">6. Não utilize palavras conhecidas como chave, crie chaves totalmente aleatórias.<BR></span>
+		<span class="avisolabel">CERTO: #KisOd9%%6!~p|45=9Z74   ERRADO: sEnh@2019#$%<BR></span>
+		<span class="avisolabel">7. Evite iniciar sua mensagem com saudações ou finalizar com despedidas. Palavras dedutíveis em posições específicas podem faciliar a quebra da criptografia.</span>
+	</div>
+
+</body>
+</html>
